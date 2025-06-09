@@ -1,0 +1,24 @@
+api_football_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      keyfile: "{{ env_var('GCP_CREDENTIAL_PATH') }}"
+      project: "{{ env_var('DBT_PROJECT') }}"
+      dataset: dbt_dev
+      threads: 6
+      timeout_seconds: 20
+      location: US
+      priority: interactive
+
+    prod:
+      type: bigquery
+      method: service-account
+      keyfile: "{{ env_var('GCP_CREDENTIAL_PATH') }}"
+      project: "{{ env_var('DBT_PROJECT') }}"
+      dataset: api_football
+      threads: 6
+      timeout_seconds: 20
+      location: US
+      priority: interactive
