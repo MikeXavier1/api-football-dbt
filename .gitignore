@@ -4,4 +4,6 @@ dbt_packages/
 logs/
 .venv
 gcp-credentials.json
-profiles.yml
+.env
+.envrc
+run_dbt.py
