@@ -1,0 +1,9 @@
+version: 2
+
+seed:
+  - name: sdd_countries_duplicated
+    config:
+      column_types:
+        country_code: string
+        country_name: string
+        is_active: boolean

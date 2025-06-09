@@ -1,0 +1,8 @@
+version: 2
+
+seed:
+  - name: sdd_countries_to_fetch
+    config:
+      column_types:
+        country_code: string
+        country_code: boolean
