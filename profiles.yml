@@ -1,0 +1,26 @@
+api_football_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      keyfile: /home/mike/projects/api-football-dbt/gcp-credentials.json
+      project: api-football-461418
+      dataset: dbt_dev
+      threads: 6
+      timeout_seconds: 20
+      location: US
+      priority: interactive
+
+  target: prod
+  outputs:
+    prod:
+      type: bigquery
+      method: service-account
+      keyfile: /home/mike/projects/api-football-dbt/gcp-credentials.json
+      project: api-football-461418
+      dataset: api_football
+      threads: 6
+      timeout_seconds: 20
+      location: US
+      priority: interactive

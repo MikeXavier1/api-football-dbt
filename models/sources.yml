@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: raw # A logical name for your raw data source (e.g., "gcp_raw")
+    database: api-football-461418 # Your GCP project ID
+    schema: raw # The BigQuery dataset where your raw .parquet tables reside
+    tables:
+      - name: countries
+        description: "Raw data from parquet file 1."

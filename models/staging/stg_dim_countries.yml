@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: stg_dim_countries
+    description: |
+      **English** API FOotball disponible countries to fetch data
+      **Portuguese** Países disponíveis na API Football para extração de dados
+    columns:
+      - name: country_name
+        description: |+
+          **English** Complete country name
+          **Portuguese** Nome completo do país
+        tests:
+          - unique
+          - not_null
+          - dbt_utils.at_least_one
+      - name: country_code
+        description: |+
+          **English** Abreviation of coutry name
+          **Portuguese** Abreviação do nome do país
+        tests:
+          - unique
+          - not_null
+      - name: country_flag_url
+        description: |+
+          **English** Country flag image URL
+          **Portuguese** URL da imagem da bandeira do país
+        tests:
+          - unique
+          - not_null
