@@ -1,7 +1,6 @@
 {{
   config(
     materialized = 'view',
-    schema = 'staging',
     unique_key='sk_country'
     )
 }}
@@ -12,7 +11,7 @@ SOURCE AS (
   SELECT
       {{ 
         generate_surrogate_key([
-          'COUNTRY_CODE',
+          'country_code',
         ])
       }} AS sk_country
       , CAST(country_name AS STRING) AS country_name

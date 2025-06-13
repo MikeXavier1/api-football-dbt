@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: dim_teams
+    description: |
+      **English** API Football available teams to fetch data  
+      **Portuguese** Times disponíveis na API Football para extração de dados
+    columns:
+      - name: sk_team
+        description: |+
+          **English** Surrogate key for this table
+          **Portuguese** Chave substituta para essa tabela
+      - name: team_id
+        description: |+
+          **English** Unique identifier of the team  
+          **Portuguese** Identificador único do time
+      - name: venue_id
+        description: |+
+          **English** Identifier of the venue associated with the team  
+          **Portuguese** Identificador do estádio associado ao time
+      - name: team_name
+        description: |+
+          **English** Official name of the football team  
+          **Portuguese** Nome oficial do time de futebol
+      - name: team_founded
+        description: |+
+          **English** Year the team was founded  
+          **Portuguese** Ano de fundação do time
+      - name: is_national
+        description: |+
+          **English** Flag indicating if the team is a national team (true/false)  
+          **Portuguese** Indica se o time é uma seleção nacional (true/false)
+      - name: team_logo_url
+        description: |+
+          **English** URL of the team’s official logo image  
+          **Portuguese** URL da imagem do logotipo oficial do time
