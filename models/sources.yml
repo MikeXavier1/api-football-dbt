@@ -6,4 +6,7 @@ sources:
     schema: raw # The BigQuery dataset where your raw .parquet tables reside
     tables:
       - name: countries
-        description: "Raw data from parquet file 1."
+        description: "Raw data from parquet countries file."
+      - name: teams
+        description: "Raw data from parquet teams file."
+      
